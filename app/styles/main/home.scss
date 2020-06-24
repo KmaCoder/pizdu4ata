@@ -1,1 +1,77 @@
 @import "./default";
+
+.timer {
+  font-size: 70px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.photos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 400px;
+
+  &--selected {
+    opacity: 1;
+    animation: pizdataya_animaciya linear 3s;
+  }
+
+  &--hiding {
+    animation: pizdataya_animaciya_uhodit ease-in-out 500ms;
+  }
+}
+
+@keyframes pizdataya_animaciya {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1) rotate(180deg);
+  }
+  20% {
+    transform: scale(0.2) rotate(360deg);
+  }
+  30% {
+    transform: scale(0.3) rotate(540deg);
+  }
+  40% {
+    transform: scale(0.4) rotate(720deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(900deg);
+  }
+  60% {
+    transform: scale(0.6) rotate(1080deg);
+  }
+  70% {
+    transform: scale(0.7) rotate(1260deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.8) rotate(1440deg);
+  }
+  100% {
+    transform: scale(1) rotate(1440deg);
+  }
+}
+
+@keyframes pizdataya_animaciya_uhodit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10);
+  }
+}

@@ -5,16 +5,21 @@
 {% endblock %}
 
 {% block content %}
-  <section id="section1" style="height: 600px; background-color: rgb(255,255,255); padding-top: 80px">
-    {{ _("Section 1") }}
-  </section>
-
-  <section id="section2" style="height: 600px; background-color: rgb(230,230,230)">
-    {{ _("Section 2") }}
-  </section>
-
-  <section id="section3" style="height: 600px; background-color: rgb(200,200,200)">
-    {{ _("Section 3") }}
+  <section style="padding-top: 100px">
+    <div class="container">
+      <div class="timer">
+        <div><span id="timer-years"></span> year</div>
+        <div><span id="timer-days"></span> days</div>
+        <div><span id="timer-hours"></span> hours</div>
+        <div><span id="timer-minutes"></span> minutes</div>
+        <div><span id="timer-seconds"></span> seconds</div>
+      </div>
+      <div class="photos">
+        {% for i in range(11) %}
+          <img class="photo" src="{{ image('photos/photo' + (i + 1) + '.png') }}" alt="">
+        {% endfor %}
+      </div>
+    </div>
   </section>
 {% endblock %}
 
