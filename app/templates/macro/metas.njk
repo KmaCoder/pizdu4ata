@@ -1,0 +1,23 @@
+{% macro metas(obj) %}
+	<title>{{ obj.title }}</title>
+
+	<meta name="description" content="{{ obj.description }}">
+
+	{# Google / Search Engine Tags #}
+	<meta itemprop="name" content="{{ obj.title }}">
+	<meta itemprop="description" content="{{ obj.description }}">
+	<meta itemprop="image" content="{{ image("/common/preview.jpg") }}">
+
+	{# Facebook Meta Tags #}
+	<meta property="og:title" content="{{ obj.title }}">
+	<meta property="og:description" content="{{ obj.description }}">
+	<meta property="og:image" content="{{ image("/common/preview.jpg") }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ globalData.siteFullUrl }}">
+
+	{# Twitter Meta Tags #}
+	<meta name="twitter:title" content="{{ obj.title }}">
+	<meta name="twitter:description" content="{{ obj.description }}">
+	<meta name="twitter:image" content="{{ image("/common/preview.jpg") }}">
+	<meta name="twitter:card" content="summary_large_image">
+{% endmacro %}

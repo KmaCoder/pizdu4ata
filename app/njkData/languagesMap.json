@@ -1,0 +1,14 @@
+{
+  "languagesMap": {
+    "en": {
+      "display_code": "en",
+      "name": "English",
+      "icon": "/lang-icons/en.svg"
+    },
+    "de": {
+      "display_code": "de",
+      "name": "Deutsch",
+      "icon": "/lang-icons/de.svg"
+    }
+  }
+}

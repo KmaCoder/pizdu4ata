@@ -1,0 +1,23 @@
+// import abstract
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+// import vendor
+@import 'bootstrap/scss/bootstrap';
+@import 'responsively-lazy/responsivelyLazy';
+
+// import base
+@import '../base/base';
+@import '../base/reset';
+@import '../base/text-sizes';
+@import '../base/typography';
+
+// import styles for components laying out the site
+@import '../layout/footer';
+@import '../layout/forms';
+@import '../layout/modals';
+@import '../layout/navigation';
+
+// import styles for smaller components
+@import '../components/buttons';
+@import '../components/dropdown';

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ activeLanguage }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="{{ root("/favicon.png") }}" type="image/x-icon">
+
+  {% from "macro/metas.njk" import metas %}
+  {% block meta %}
+    {% if meta[activePage] %}{{ metas(meta[activePage]) }}{% else %}{{ metas(meta[""]) }}{% endif %}
+  {% endblock %}
+
+  {% block styles %}
+    {{ style("default") }}
+  {% endblock %}
+
+  {% block headEnd %}{% endblock %}
+</head>
+<body>
+{% block bodyStart %}{% endblock %}
+
+{% block navigation %}
+  {% include "components/navigation.njk" %}
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}
+  {% include "components/footer.njk" %}
+{% endblock %}
+
+<div class="modals-container">
+  <div class="modal__outer">
+    <button type="button" class="modal__close"></button>
+    {% include "components/modals/modalVideo.njk" %}
+    {% block modals %}{% endblock %}
+  </div>
+</div>
+
+{% block scripts %}
+  {{ script("default") }}
+{% endblock %}
+
+{% block bodyEnd %}{% endblock %}
+</body>
+</html>

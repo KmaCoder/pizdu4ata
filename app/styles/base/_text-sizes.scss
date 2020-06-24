@@ -1,0 +1,137 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.15;
+  font-family: $font-family-def;
+  font-weight: 700;
+  display: block;
+}
+
+.title-1 {
+  font-size: 36px;
+  line-height: 1.25;
+
+  @include breakpoint('max-lg') {
+    font-size: 32px;
+  }
+
+  @include breakpoint('max-sm') {
+    font-size: 30px;
+  }
+
+  @include breakpoint('max-xs') {
+    font-size: 28px;
+  }
+}
+
+.title-2 {
+  font-size: 32px;
+
+  @include breakpoint('max-lg') {
+    font-size: 30px;
+  }
+
+  @include breakpoint('max-sm') {
+    font-size: 27px;
+  }
+}
+
+.title-3 {
+  font-size: 28px;
+
+  @include breakpoint('max-lg') {
+    font-size: 27px;
+  }
+
+  @include breakpoint('max-sm') {
+    font-size: 26px;
+  }
+
+  @include breakpoint('max-xs') {
+    font-size: 24px;
+  }
+}
+
+.title-4 {
+  font-size: 24px;
+
+  @include breakpoint('max-xs') {
+    font-size: 22px;
+  }
+}
+
+.text-xxl {
+  font-size: 46px;
+
+  @include breakpoint('max-lg') {
+    font-size: 40px;
+  }
+
+  @include breakpoint('max-md') {
+    font-size: 38px;
+  }
+
+  @include breakpoint('max-sm') {
+    font-size: 36px;
+  }
+
+  @include breakpoint('max-xs') {
+    font-size: 34px;
+  }
+}
+
+.text-lg {
+  font-size: 32px;
+  font-weight: 300;
+
+  @include breakpoint('max-lg') {
+    font-size: 28px;
+  }
+
+  @include breakpoint('max-md') {
+    font-size: 26px;
+  }
+
+  @include breakpoint('max-sm') {
+    font-size: 24px;
+  }
+
+  @include breakpoint('max-xs') {
+    font-size: 22px;
+  }
+}
+
+.text-md {
+  font-size: 24px;
+  font-weight: 300;
+
+  @include breakpoint('max-lg') {
+    font-size: 20px;
+  }
+
+  @include breakpoint('max-xs') {
+    font-size: 18px;
+  }
+}
+
+.text-sm {
+  font-size: 18px;
+  font-weight: 300;
+
+  @include breakpoint('max-xs') {
+    font-size: 16px;
+  }
+}
+
+.text-xs {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.text-xxs {
+  font-size: 12px;
+  font-weight: 300;
+}

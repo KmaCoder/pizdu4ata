@@ -1,0 +1,14 @@
+.lang-selector {
+  &__menu {
+    margin-top: 0.5rem;
+  }
+
+  &__item {
+    &__icon {
+      width: 20px;
+    }
+    &__text {
+      margin: 0 10px 0 15px;
+    }
+  }
+}

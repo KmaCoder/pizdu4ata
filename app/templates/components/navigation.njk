@@ -1,0 +1,46 @@
+{% from "components/dropdowns/dropdownDefault.njk" import dropdownDefault with context %}
+{% from "components/dropdowns/languageDropdown.njk" import languageDropdown with context %}
+
+<nav class="navigation" id="navigation">
+  <div class="container navigation__container">
+    <div class="navigation__top">
+      <a href="{{ href('/') }}" class="navigation__logo">
+        <img src="{{ image('common/logo.png') }}" alt="">
+      </a>
+      <div class="navigation__top__mobile navigation--mobile-show">
+        {{ languageDropdown(shortCode=true) }}
+      </div>
+      <button class="navigation__burger hamburger hamburger--slider js-navbar-toggle">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </div>
+
+    <div class="navigation__collapse">
+      <ul class="navigation__items">
+        <li class="navigation__item">
+          <a class="navigation__link bottom-hover" href="{{ href('/page1') }}">
+            {{ _("Page 1") }}
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link bottom-hover" href="{{ href('/page2') }}">
+            {{ _("Page 2") }}
+          </a>
+        </li>
+        <li class="navigation__item">
+          {{ dropdownDefault("Sections", [
+            {"link": href("#section1"), "text": "Section 1"},
+            {"link": href("#section2"), "text": "Section 2"},
+            {"link": href("#section3"), "text": "Section 3"}
+          ]) }}
+        </li>
+        <li class="navigation__item navigation--mobile-hidden">
+          {{ languageDropdown() }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="navigation--mobile-show"></div>
+  </div>
+</nav>
+

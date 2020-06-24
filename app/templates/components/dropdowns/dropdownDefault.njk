@@ -1,0 +1,14 @@
+{% macro dropdownDefault(title, items) %}
+  <div class="dropdown-custom">
+    <a class="dropdown-custom__title" href="#" id="dropdownCustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{ title }}
+    </a>
+    <div class="dropdown-custom__menu dropdown-menu" aria-labelledby="dropdownCustom">
+      {% for item in items %}
+        <a class="dropdown-custom__item{% if item.selected %} dropdown-custom__item--selected{% endif %}" href="{{ item.link }}">
+          {{ item.text }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

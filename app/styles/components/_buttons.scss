@@ -1,0 +1,25 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+	min-height: 70px;
+	line-height: normal;
+	max-width: 310px;
+	border-radius: 9px;
+	background-color: #292929;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@include breakpoint('max-xs') {
+		min-height: 55px;
+	}
+}

@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+  {{ style("home") }}
+{% endblock %}
+
+{% block content %}
+  <section id="section1" style="height: 600px; background-color: rgb(255,255,255); padding-top: 80px">
+    {{ _("Section 1") }}
+  </section>
+
+  <section id="section2" style="height: 600px; background-color: rgb(230,230,230)">
+    {{ _("Section 2") }}
+  </section>
+
+  <section id="section3" style="height: 600px; background-color: rgb(200,200,200)">
+    {{ _("Section 3") }}
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  {{ script("home") }}
+{% endblock %}
