@@ -24,7 +24,7 @@ jspm_packages
 # Ignore Generated Files.
 dev
 stag
-dist
+#dist
 _images
 testing
 .publish
